@@ -3,8 +3,8 @@
 Trabalho desenvolvido para a disciplina de Inteligência Artificial da UFES, campus Alegre.
 
 Ele segue a linha de trabalhos em Prolog que tenho elaborado para meus alunos. Os primeiros trabalhos foram:
-* [Corrida em Prolog](https://github.com/jeiks/corrida_em_prolog) [Online](https://www.jeiks.net/corrida_em_prolog/)
-* [Batalha de Tanques](https://github.com/jeiks/batalha_tanques) [Online](https://www.jeiks.net/batalha_tanques/)
+* [Corrida em Prolog](https://github.com/jeiks/corrida_em_prolog) - ([Online](https://www.jeiks.net/corrida_em_prolog/))
+* [Batalha de Tanques](https://github.com/jeiks/batalha_tanques) - ([Online](https://www.jeiks.net/batalha_tanques/))
 
 O código inicial da corrida foi uma adaptação do projeto do Radu Mariescu-Istodor:
 [Self-driding car - No libraries - JavaScript Course](https://www.youtube.com/watch?v=NkI9ia2cLhc)\
