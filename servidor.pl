@@ -13,8 +13,8 @@
 :- use_module(library(http/http_path)).
 :- use_module(library(http/http_server_files)).
 %DEBUG:
-:- use_module(library(http/http_error)).
-:- debug.
+%:- use_module(library(http/http_error)).
+%:- debug.
 
 :- use_module(jatos_controle, [vez/3]).
 
@@ -24,7 +24,6 @@
     action,       % Predicado 'action'
     []).
 
-:- http_handler(root(js), serve_files_in_directory('/home/jeiks/Trab-IA/js'), [prefix]).
 :- http_handler(root(.), http_reply_from_files('.', []), [prefix]).
 
 :- json_object
