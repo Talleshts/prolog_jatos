@@ -10,6 +10,10 @@ O código inicial da corrida foi uma adaptação do projeto do Radu Mariescu-Ist
 [Self-driding car - No libraries - JavaScript Course](https://www.youtube.com/watch?v=NkI9ia2cLhc)
 
 Atualmente, já tiveram muitas modificações e a implementação da batalha de tanques e de jatos.
+
+Se você quiser testar, acesse [http://jeiks.net/prolog_jatos](https://www.jeiks.net/prolog_jatos/)
+
+Use as setas para direcionar seu Jato, ENTER ou ESPAÇO para atirar e tecla "s" para os placares instantâneos.
  
 ### Instruções
 Há várias formas de utilizar esse código, escolhendo colocar um jato movido pelo teclado, nenhum ou vários jatos movidos aleatoriamente pelo JavaScript e nenhum ou vários jatos movidos pelo Prolog.
@@ -33,9 +37,10 @@ Caso existam jatos movidos pelo Prolog, siga os passos abaixo.
 
 ### Como executar o servidor pelo Prolog
 
-Instale o SWI-Prolog [https://www.swi-prolog.org/](https://www.swi-prolog.org/)
-
-Execute o comando: ``swipl -s servidor.pl`` (ou abra esse arquivo no swi-prolog)
+1. Instale o SWI-Prolog [https://www.swi-prolog.org/](https://www.swi-prolog.org/)
+2. Baixe esse repositório: ``git clone https://github.com/jeiks/prolog_jatos``
+3. Entre no diretório criado: ``cd prolog_jatos``
+4. E execute o comando: ``swipl -s servidor.pl`` (ou abra esse arquivo no swi-prolog)
 
 Ele já inicia o servidor automaticamente e exibe a seguinte mensagem:
 <pre>
