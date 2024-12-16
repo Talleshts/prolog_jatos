@@ -3,17 +3,30 @@
 Trabalho desenvolvido para a disciplina de Inteligência Artificial da UFES, campus Alegre.
 
 Ele segue a linha de trabalhos em Prolog que tenho elaborado para meus alunos. Os primeiros trabalhos foram:
-* [Corrida em Prolog](https://github.com/jeiks/corrida_em_prolog)
-* [Batalha de Tanques](https://github.com/jeiks/batalha_tanques)
+* [Corrida em Prolog](https://github.com/jeiks/corrida_em_prolog) [Online](https://www.jeiks.net/corrida_em_prolog/)
+* [Batalha de Tanques](https://github.com/jeiks/batalha_tanques) [Online](https://www.jeiks.net/batalha_tanques/)
 
 O código inicial da corrida foi uma adaptação do projeto do Radu Mariescu-Istodor:
-[Self-driding car - No libraries - JavaScript Course](https://www.youtube.com/watch?v=NkI9ia2cLhc)
-
+[Self-driding car - No libraries - JavaScript Course](https://www.youtube.com/watch?v=NkI9ia2cLhc)\
 Atualmente, já tiveram muitas modificações e a implementação da batalha de tanques e de jatos.
 
-Se você quiser testar, acesse [http://jeiks.net/prolog_jatos](https://www.jeiks.net/prolog_jatos/)
+O objetivo desse trabalho é controlar um jato utilizando código em Prolog ([SWI-Prolog](https://www.swi-prolog.org/)) para que ele seja o único sobrevivente.
+Após isso, também será realizada uma disputa em sala de aula, com todos os trabalhos.
 
-Use as setas para direcionar seu Jato, ENTER ou ESPAÇO para atirar e tecla "s" para os placares instantâneos.
+Regras:
+* Cada jato pode atirar um míssil por segundo;
+* Cada jato começa com uma vida de 100 pontos;
+* Se bater nas laterais do ambiente, perde 2 pontos de vida por segundo que estiver em contato/atrito;
+* Se for atingido por um míssil, perde 10 pontos de vida.
+* Os aviões podem passar sobre os outros, pois considerei que estão em altitudes diferentes.
+
+Teclas:
+* Setas do teclado: movimentação do jato.
+* Espaço ou ENTER: atira\
+  Obs.: só pode atirar uma bala por segundo.
+* Tecla "s": exibe e esconde o placar do jogo.
+
+Se você quiser testar online, acesse [http://jeiks.net/prolog_jatos](https://www.jeiks.net/prolog_jatos/)
  
 ### Instruções
 Há várias formas de utilizar esse código, escolhendo colocar um jato movido pelo teclado, nenhum ou vários jatos movidos aleatoriamente pelo JavaScript e nenhum ou vários jatos movidos pelo Prolog.
