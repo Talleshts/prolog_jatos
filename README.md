@@ -8,7 +8,7 @@ Ele segue a linha de trabalhos em Prolog que tenho elaborado para meus alunos. O
 
 O código inicial da corrida foi uma adaptação do projeto do Radu Mariescu-Istodor:
 [Self-driding car - No libraries - JavaScript Course](https://www.youtube.com/watch?v=NkI9ia2cLhc)\
-Atualmente, já tiveram muitas modificações e a implementação da batalha de tanques e de jatos.
+Atualmente, já modifiquei bastante o código. Mas a inspiração veio do trabalho dele.
 
 O objetivo desse trabalho é controlar um jato utilizando código em Prolog ([SWI-Prolog](https://www.swi-prolog.org/)) para que ele seja o único sobrevivente.
 Após isso, também será realizada uma disputa em sala de aula, com todos os trabalhos.
