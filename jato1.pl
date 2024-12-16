@@ -5,18 +5,19 @@
 % Sensores:
 % X: posição horizontal do jato
 % Y: posiçao vertical do jato
-% ANGLE: angulo de inclinacao do robo: 0 para virado para frente até PI*2 (~6.28)
-% Sensores: esquerda (S1,S2), centro (S3), direita (S4,S5), ré (S6)
-%   S1,S2,S3,S4,S5,S6: valores de 0 à 1, onde 0 indica sem obstáculo e 1 indica tocando o jato
+% ANGLE: angulo de inclinacao do jato: 0 para virado para frente até PI*2 (~6.28)
+% Sensores: olhe em "doc/info.png"
+%   S1,S2,S3,S4,S5,S6,S7,S8,S9,S10: valores de 0 à 1, onde 0 indica sem obstáculo e 1 indica tocando o jato
 % SCORE: inteiro com a "vida" do jato. Em zero, ele perdeu
+% SPEED: velocidade do jato
 % Controles:
 % [FORWARD, REVERSE, LEFT, RIGHT, BOOM]
-% FORWARD: 1 para ir pra frente e 0 para não ir
-% REVERSE: 1 para ir pra tras e 0 para não ir
+% FORWARD: 1 para acelerar e 0 para continuar a velocidade atual
+% REVERSE: 1 para desacelerar e 0 para continuar a velocidade atual
 % LEFT: 1 para ir pra esquerda e 0 para não ir
 % RIGHT: 1 para ir pra direita e 0 para não ir
-% BOOM: 1 para tentar disparar (BOOM), pois ele só pode disparar uma bala a cada segundo
-% obter_controles([X,Y,ANGLE,S1,S2,S3,S4,S5,S6], [FORWARD, REVERSE, LEFT, RIGHT, BOOM]) :-
+% BOOM: 1 para tentar disparar (BOOM). Obs.: ele só pode disparar uma bala a cada segundo
+% obter_controles([X,Y,ANGLE,S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,SCORE,SPEED], [FORWARD, REVERSE, LEFT, RIGHT, BOOM]) :-
 %     FORWARD is 1,
 %     REVERSE is 0,
 %     LEFT is 1,
