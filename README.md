@@ -14,11 +14,13 @@ O objetivo desse trabalho é controlar um jato utilizando código em Prolog ([SW
 Após isso, também será realizada uma disputa em sala de aula, com todos os trabalhos.
 
 Regras:
+* Cada jato sempre terá uma velocidade mínima para não cair;
+* Cada jato pode aumentar ou diminuir sua velocidade em um intervalo pré-definido de máximo e mínimo;
 * Cada jato pode atirar um míssil por segundo;
 * Cada jato começa com uma vida de 100 pontos;
-* Se bater nas laterais do ambiente, perde 2 pontos de vida por segundo que estiver em contato/atrito;
+* Se encostar nas laterais do ambiente, perde 2 pontos de vida por segundo que estiver em contato/atrito;
 * Se for atingido por um míssil, perde 10 pontos de vida.
-* Os aviões podem passar sobre os outros, pois considerei que estão em altitudes diferentes.
+* Os aviões podem passar sobre os outros, pois estão em altitudes diferentes. ;)
 
 Teclas:
 * Setas do teclado: movimentação do jato.
