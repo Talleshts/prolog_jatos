@@ -52,7 +52,7 @@ Caso existam jatos movidos pelo Prolog, siga os passos abaixo.
 
 ### Como executar o servidor pelo Prolog
 
-1. Instale o SWI-Prolog [https://www.swi-prolog.org/](https://www.swi-prolog.org/)
+1. Instale o SWI-Prolog em seu GNU/Linux (derivado Debian) com: ``sudo apt install swi-prolog`` (ou baixe em [https://www.swi-prolog.org/](https://www.swi-prolog.org/))
 2. Baixe esse repositório: ``git clone https://github.com/jeiks/prolog_jatos``
 3. Entre no diretório criado: ``cd prolog_jatos``
 4. E execute o comando: ``swipl -s servidor.pl`` (ou abra esse arquivo no swi-prolog)
