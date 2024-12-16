@@ -2,6 +2,8 @@
 
 Trabalho desenvolvido para a disciplina de Inteligência Artificial da UFES, campus Alegre.
 
+<p align="center"><img src="doc/screenshot.png" style="width: 700px;"></p>
+
 Ele segue a linha de trabalhos em Prolog que tenho elaborado para meus alunos. Os primeiros trabalhos foram:
 * [Corrida em Prolog](https://github.com/jeiks/corrida_em_prolog) - ([Online](https://www.jeiks.net/corrida_em_prolog/))
 * [Batalha de Tanques](https://github.com/jeiks/batalha_tanques) - ([Online](https://www.jeiks.net/batalha_tanques/))
