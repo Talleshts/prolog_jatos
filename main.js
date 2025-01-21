@@ -11,60 +11,84 @@ const dummyTunkNames = /*from chatGPT*/[ "Boladão", "Rabugento", "Trovão", "Ba
 
 
 //// Essa área pode ser configurada por você, mas aconselho não trocar o maxSpeed, arenaPadding e tamanho dos jatos.
-const maxSpeed=2, arenaPadding=10, jetW=50, jetH=30,
-      score=100, // vida de cada jato
-      dummyJets=10, // quantidade de jatos aleatórios
-      keysJet=true, // modifique para ter um jato controlado pelo teclado
-      // nome dos jatos controlados por Prolog (obs.: tem que adaptar o servidor.pl ao mexer aqui)
-      // a quantidade é referente a quantidade de nomes, na falta de criatividade, o nome pode repetir... rs
-      // exemplos de dois:
-      //prologJets=["Ligerin", "ApagaFogo"], // se quiser colocar dois jatos proloog, faça assim
-      //prologJets=["Ligerin"], // escolha aqui o nome de seu jato controlado por prolog
-      prologJets=[], //se não quiser nenhum jato prolog, faça assim
-      showSensors=false, //modifique para mostrar os sensores dos jatos PROLOG e KEYS
-      showSensorsOfDummyJets=false; //modifique para mostrar os sensores dos jatos DUMMY
+const maxSpeed = 2,
+  arenaPadding = 10,
+  jetW = 50,
+  jetH = 30,
+  score = 100, // vida de cada jato
+  dummyJets = 10, // quantidade de jatos aleatórios
+  keysJet = false, // modifique para ter um jato controlado pelo teclado
+  // nome dos jatos controlados por Prolog (obs.: tem que adaptar o servidor.pl ao mexer aqui)
+  // a quantidade é referente a quantidade de nomes, na falta de criatividade, o nome pode repetir... rs
+  // exemplos de dois:
+  //prologJets=["Ligerin", "ApagaFogo"], // se quiser colocar dois jatos proloog, faça assim
+  //prologJets=["Ligerin"], // escolha aqui o nome de seu jato controlado por prolog
+  prologJets = ["jatoTalles"], //se não quiser nenhum jato prolog, faça assim
+  showSensors = true, //modifique para mostrar os sensores dos jatos PROLOG e KEYS
+  showSensorsOfDummyJets = false; //modifique para mostrar os sensores dos jatos DUMMY
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //// Não mexa daqui para baixo:
-const arena = new Arena(canvas.height, canvas.width, arenaPadding), _colors = new Colors(0);
+const arena = new Arena(canvas.height, canvas.width, arenaPadding),
+  _colors = new Colors(0);
 var jets = [];
 if (keysJet) jets.push(newJet("KEYS"));
-for (let i=0;i<prologJets.length;i++) jets.push(newJet("PROLOG"));
-for (let i=0;i<dummyJets;i++) jets.push(newJet("DUMMY"));
+for (let i = 0; i < prologJets.length; i++) jets.push(newJet("PROLOG"));
+for (let i = 0; i < dummyJets; i++) jets.push(newJet("DUMMY"));
 
-var allBOOMS = new Array(), lastBullet = new Array(jets.length);
-for (let i=0;i<lastBullet.length;i++) lastBullet[i] = 0;
+var allBOOMS = new Array(),
+  lastBullet = new Array(jets.length);
+for (let i = 0; i < lastBullet.length; i++) lastBullet[i] = 0;
 
 animate();
 
 // controls: ["DUMMY", "KEYS", "PROLOG"]
-function newJet(controls="DUMMY") {
-    let pos = getPosition(), name, id=-1;
-    switch(controls) {
-        case "PROLOG":
-            name=prologJets[prologJetIDs];
-            id=prologJetIDs++;
-            break;
-        case "DUMMY":
-            name=dummyTunkNames[Math.round(Math.random()*dummyTunkNames.length)%dummyTunkNames.length];
-            break;
-        case "KEYS":
-            name="Humano";
-            break;
-    }
-    return new Jet(pos.x,pos.y,jetH,jetW,
-                    canvas.height,canvas.width,
-                    arenaPadding,controls,maxSpeed,
-                    _colors.getColor(), score,
-                    (controls=="PROLOG")?id:-1,
-                    name, timeForUpdatingProlog);
+function newJet(controls = "DUMMY") {
+  let pos = getPosition(),
+    name,
+    id = -1;
+  switch (controls) {
+    case "PROLOG":
+      name = prologJets[prologJetIDs];
+      id = prologJetIDs++;
+      break;
+    case "DUMMY":
+      name =
+        dummyTunkNames[
+          Math.round(Math.random() * dummyTunkNames.length) %
+            dummyTunkNames.length
+        ];
+      break;
+    case "KEYS":
+      name = "Humano";
+      break;
+  }
+  return new Jet(
+    pos.x,
+    pos.y,
+    jetH,
+    jetW,
+    canvas.height,
+    canvas.width,
+    arenaPadding,
+    controls,
+    maxSpeed,
+    _colors.getColor(),
+    score,
+    controls == "PROLOG" ? id : -1,
+    name,
+    timeForUpdatingProlog
+  );
 }
 
 function getPosition() {
-    let jetPadding = arenaPadding+Math.max(jetH, jetW);
-    let x = parseInt(Math.random()*(canvas.width-jetPadding*2)+jetPadding),
-        y = parseInt(Math.random()*(canvas.height-jetPadding*2)+jetPadding);
-    return {x:x, y:y};
+  let jetPadding = arenaPadding + Math.max(jetH, jetW);
+  let x = parseInt(
+      Math.random() * (canvas.width - jetPadding * 2) + jetPadding
+    ),
+    y = parseInt(Math.random() * (canvas.height - jetPadding * 2) + jetPadding);
+  console.log(x, y);
+  return { x: x, y: y };
 }
 
 function getScores() {
